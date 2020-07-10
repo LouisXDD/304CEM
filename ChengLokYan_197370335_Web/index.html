@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Game Warrior Template</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game Warrior Template">
+    <meta name="keywords" content="warrior, game, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header section -->
+    <header class="header-section fixed-top">
+        <div class="container">
+            <!-- logo -->
+            <a class="site-logo" href="/index">
+                <img src="img/logo.png" alt="">
+            </a>
+            <div class="user-panel">
+                <a id="loginHav" href="javascript:void(0)" data-toggle="modal" data-target="#signupPage">Login</a> / <a id="registerHav" href="javascript:void(0)" data-toggle="modal" data-taget="#signupPage">Register</a>
+            </div>
+            <!-- responsive -->
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+            <!-- site menu -->
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/review">Games</a></li>
+                    <li><a id="goMyProfile" href="javascript:void(0)" data-toggle="modal" data-target="#signupPage">MyProfile</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header section end -->
+
+
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="hero-slider owl-carousel">
+            <div class="hs-item set-bg" data-setbg="img/slider-1.jpg">
+                <div class="hs-text">
+                    <div class="container">
+                        <h2>The Best <span>Games</span> Out There</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada <br> lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. <br>Suspendisse cursus faucibus finibus.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="hs-item set-bg" data-setbg="img/slider-2.jpg">
+                <div class="hs-text">
+                    <div class="container">
+                        <h2>The Best <span>Games</span> Out There</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada <br> lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. <br>Suspendisse cursus faucibus finibus.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero section end -->
+
+
+    <!-- Latest news section -->
+    <div class="latest-news-section">
+        <div class="ln-title">Latest News</div>
+        <div class="news-ticker">
+            <div class="news-ticker-contant">
+                <div class="nt-item"><span class="new">news</span>PlayStation 5 release date is coming in late 2020. </div>
+                <div class="nt-item"><span class="strategy">game</span>The Last of Us Part II </div>
+                <div class="nt-item"><span class="racing">recommend</span> FINAL FANTASY VII REMAKE </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest news section end -->
+
+    <!-- pop up login/resigter-->
+    <div class="modal fade" id="signupPage">
+
+        <div class="modal-dialog">
+            <div class="cont modal-content">
+                <div class="form sign-in">
+                    <div class="sign">Sign In</div>
+
+                    <label>
+							<span>Email Address</span>
+							<input id="loginName" type="email" name="email">
+						  </label>
+                    <label>
+							<span>Password</span>
+							<input id="loginPassword" type="password" name="password">
+						  </label>
+                    <button id="loginSumit" class="submit" type="button">Sign In</button>
+                    <p class="forgot-pass">Forgot Password ?</p>
+
+                </div>
+
+                <div class="sub-cont">
+                    <div class="img">
+                        <div class="img-text m-up">
+                            <h2>New here?</h2>
+                            <p>Sign up and discover great amount of new opportunities!</p>
+                        </div>
+                        <div class="img-text m-in">
+                            <h2>One of us?</h2>
+                            <p>If you already has an account, just sign in. We've missed you!</p>
+                        </div>
+                        <div class="img-btn">
+                            <span class="m-up">Sign Up</span>
+                            <span class="m-in">Sign In</span>
+                        </div>
+                    </div>
+                    <div class="form sign-up">
+                        <div class="sign">Sign Up</div>
+                        <label>
+							  <span>Name</span>
+							  <input id="registerName" type="text">
+							</label>
+                        <label>
+							  <span>Email</span>
+							  <input id="registerEmail" type="email">
+							</label>
+                        <label>
+							  <span>Password</span>
+							  <input id="registerPassword" type="password">
+							</label>
+                        <label>
+							  <span>Confirm Password</span>
+							  <input id="registerPassword2" type="password">
+							</label>
+                        <button id="registerSumit" type=" button " class="submit ">Sign Up Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Feature section -->
+    <section class="feature-section spad ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-3 col-md-6 p-0 ">
+                    <div class="feature-item set-bg " data-setbg="img/features/1.jpg ">
+                        <span class="cata new ">new</span>
+                        <div class="fi-content text-white ">
+                            <h5><a href="# ">Suspendisse ut justo tem por, rutrum</a></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a href="# " class="fi-comment ">3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 p-0 ">
+                    <div class="feature-item set-bg " data-setbg="img/features/2.jpg ">
+                        <span class="cata strategy ">strategy</span>
+                        <div class="fi-content text-white ">
+                            <h5><a href="# ">Justo tempor, rutrum erat id, molestie</a></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a href="# " class="fi-comment ">3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 p-0 ">
+                    <div class="feature-item set-bg " data-setbg="img/features/3.jpg ">
+                        <span class="cata new ">new</span>
+                        <div class="fi-content text-white ">
+                            <h5><a href="# ">Nullam lacinia ex eleifend orci porttitor</a></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a href="# " class="fi-comment ">3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 p-0 ">
+                    <div class="feature-item set-bg " data-setbg="img/features/4.jpg ">
+                        <span class="cata racing ">racing</span>
+                        <div class="fi-content text-white ">
+                            <h5><a href="# ">Lacinia ex eleifend orci suscipit</a></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a href="# " class="fi-comment ">3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Feature section end -->
+
+
+    <!-- Recent game section  -->
+    <section class="recent-game-section spad set-bg " data-setbg="img/recent-game-bg.png ">
+        <div class="container ">
+            <div class="section-title ">
+                <div class="cata new ">new</div>
+                <h2>Recent Games</h2>
+            </div>
+            <div class="row ">
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="recent-game-item ">
+                        <div class="rgi-thumb set-bg " data-setbg="img/recent-game/1.jpg ">
+                            <div class="cata new ">new</div>
+                        </div>
+                        <div class="rgi-content ">
+                            <h5>Suspendisse ut justo tem por, rutrum</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet, consectetur elit. </p>
+                            <a href="# " class="comment ">3 Comments</a>
+                            <div class="rgi-extra ">
+                                <div class="rgi-star "><img src="img/icons/star.png " alt=" "></div>
+                                <div class="rgi-heart "><img src="img/icons/heart.png " alt=" "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="recent-game-item ">
+                        <div class="rgi-thumb set-bg " data-setbg="img/recent-game/2.jpg ">
+                            <div class="cata racing ">racing</div>
+                        </div>
+                        <div class="rgi-content ">
+                            <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet, consectetur elit. </p>
+                            <a href="# " class="comment ">3 Comments</a>
+                            <div class="rgi-extra ">
+                                <div class="rgi-star "><img src="img/icons/star.png " alt=" "></div>
+                                <div class="rgi-heart "><img src="img/icons/heart.png " alt=" "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="recent-game-item ">
+                        <div class="rgi-thumb set-bg " data-setbg="img/recent-game/3.jpg ">
+                            <div class="cata adventure ">Adventure</div>
+                        </div>
+                        <div class="rgi-content">
+                            <h5>Suspendisse ut justo tem por, rutrum</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet, consectetur elit. </p>
+                            <a href=" " class="commen ">3 Comments</a>
+                            <div class="rgi-extra">
+                                <div class="rgi-sta "><img src="img/icons/star.png " alt=" "></div>
+                                <div class="rgi-heart"><img src="img/icons/heart.png " alt=" "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recent game section end -->
+
+
+    <!-- Tournaments section -->
+    <section class="tournaments-section spad">
+        <div class="container">
+            <div class="tournament-title">Tournaments</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="tournament-item mb-4 mb-lg-0">
+                        <div class="ti-notic">Premium Tournament</div>
+                        <div class="ti-content">
+                            <div class="ti-thumb set-bg" data-setbg="img/tournament/1.jpg "></div>
+                            <div class="ti-text">
+                                <h4>World Of WarCraft</h4>
+                                <ul>
+                                    <li><span>Tournament Beggins:</span> June 20, 2018</li>
+                                    <li><span>Tounament Ends:</span> July 01, 2018</li>
+                                    <li><span>Participants:</span> 10 teams</li>
+                                    <li><span>Tournament Author:</span> Admin</li>
+                                </ul>
+                                <p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="tournament-item">
+                        <div class="ti-notic">Premium Tournament</div>
+                        <div class="ti-content">
+                            <div class="ti-thumb set-bg" data-setbg="img/tournament/2.jpg "></div>
+                            <div class="ti-text">
+                                <h4>DOOM</h4>
+                                <ul>
+                                    <li><span>Tournament Beggins:</span> June 20, 2018</li>
+                                    <li><span>Tounament Ends:</span> July 01, 2018</li>
+                                    <li><span>Participants:</span> 10 teams</li>
+                                    <li><span>Tournament Author:</span> Admin</li>
+                                </ul>
+                                <p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tournaments section bg -->
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+        <div class="container">
+            <ul class="footer-menu">
+
+
+            </ul>
+            <p class="copyright">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script> All rights reserved | This template is made with <i class="fa fa-heart-o " aria-hidden="true "></i> by <a href="https://colorlib.com " target="_blank ">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+
+    <!--====== Javascripts & Jquery ======-->
+    <script src="js/jquery-3.2.1.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/jquery.marquee.min.js "></script>
+    <script src="js/main.js "></script>
+    <script>
+        document.querySelector('.img-btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s-signup')
+        });
+    </script>
+
+    <!--login%resgister-->
+    <script>
+        $("#loginSumit").click(function() {
+            alert("Loading now, please wait.");
+            var tempName, tempPassword;
+
+            tempName = $("#loginName").val();
+            tempPassword = $("#loginPassword").val();
+
+            var mydata = "&name=" + tempName + "&password=" + tempPassword;
+
+            if (tempName == "" || tempPassword == "") {
+                alert("Please fill in all the blanks.");
+            } else {
+                $.ajax({
+                    url: "http://127.0.0.1:9999/login",
+                    type: 'POST',
+                    data: mydata,
+                    success: function(result) {
+                        if (result == "fail") {
+                            alert("Not have this user, please check your username ");
+                        } else if (result == "wrongpassword") {
+                            alert("incorrect password");
+                        } else if (result == "success") {
+                            alert("Login success");
+                            alert("Thank you for using our service. Enjoy!");
+                            localStorage.setItem("name", tempName);
+                            window.location.href = "http://127.0.0.1:9999/index";
+                        }
+                    },
+                    error: function(xhr, textStatus, errorThrown) {
+
+                        console.log(textStatus);
+                    }
+                });
+            }
+        });
+    </script>
+
+
+
+    <script>
+        $(document).ready(function() {
+            var isLogin;
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:9999/logincheck",
+                dataType: "text",
+
+                success: function(result) {
+                    if (result == "fail") {
+                        isLogin = false;
+                        localStorage.clear();
+
+                    } else if (result == "success") {
+                        isLogin = true;
+
+                        document.getElementById("loginHav").innerHTML = localStorage.getItem("name");
+                        document.getElementById("loginHav").removeAttribute("data-toggle");
+
+                        document.getElementById("registerHav").innerHTML = "Logout";
+                        document.getElementById("registerHav").removeAttribute("data-toggle");
+
+                        document.getElementById("goMyProfile").removeAttribute("data-toggle");
+
+
+                    }
+
+
+
+
+                    $("#registerHav").click(function() {
+                        if (isLogin) {
+                            window.location.href = "http://127.0.0.1:9999/logout";
+                        }
+                    });
+
+
+                    $("#goMyProfile").click(function() {
+                        if (isLogin) {
+                            window.location.href = "http://127.0.0.1:9999/myProfile";
+                        } else {
+                            alert("Please Login First!");
+                        }
+                    });
+
+
+                },
+                error: function(xhr, textStatus, errorThrown) {
+
+                    console.log(textStatus);
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $("#registerSumit").click(function() {
+                alert("Loading now, please wait.");
+                var tempName, temEmail, tempPassword, temPassword2;
+
+                //tempEmail = document.forms["signin "]["Email "].value;
+                //	tempName = document.forms["signin "]["Name "].value;
+                //tempPassword = document.forms["signin "]["Password "].value;
+
+
+                tempName = $("#registerName").val();
+                temEmail = $("#registerEmail").val();
+                tempPassword = $("#registerPassword").val();
+                tempPassword2 = $("#registerPassword2").val();
+
+                $Emailchecking = IsEmail(temEmail);
+
+                if (tempName == "" || tempPassword == "" || temEmail == "" || tempPassword2 == "") {
+                    alert("Please fill in all the blanks.");
+
+                } else if (tempPassword != tempPassword2) {
+                    alert("Please make sure your password is same.");
+                } else if ($Emailchecking == false) {
+                    alert("Please enter a correct email type");
+                } else {
+
+                    var mydata = "&name=" + tempName + "&password=" + tempPassword;
+
+                    $.ajax({
+
+                        url: " http://127.0.0.1:9999/Register",
+                        type: 'POST',
+                        data: mydata,
+                        success: function(result) {
+
+
+
+                            if (result == "fail") {
+                                alert("Registration failed, please try again with other username");
+                            } else if (result == "success") {
+                                alert("Registration success");
+                                alert("Thanks for creating an account, your username is: " + tempName + "and password is: " + tempPassword + ". Enjoy! ");
+                                localStorage.setItem("name", tempName);
+                                window.location.href = "http://127.0.0.1:9999/index";
+                            }
+
+
+
+                            //	window.location.href = "http://ABC-nekokitsune4242917356.codeanyapp.com:4242/Register ";
+                        },
+                        error: function(xhr, textStatus, errorThrown) {
+
+                            console.log(textStatus);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        function IsEmail(email) {
+
+            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (!regex.test(email)) {
+
+                return false;
+
+            } else {
+
+                return true;
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

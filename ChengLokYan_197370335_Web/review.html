@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Game Warrior Template</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game Warrior Template">
+    <meta name="keywords" content="warrior, game, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- pop up login/resigter-->
+    <div class="modal fade" id="signupPage">
+
+        <div class="modal-dialog">
+            <div class="cont modal-content">
+                <div class="form sign-in">
+                    <div class="sign">Sign In</div>
+
+                    <label>
+                        <span>User Name</span>
+                        <input id="loginName" type="text" name="texxt">
+                      </label>
+                    <label>
+                        <span>Password</span>
+                        <input id="loginPassword" type="password" name="password">
+                      </label>
+                    <button id="loginSumit" class="submit" type="button">Sign In</button>
+                    <p class="forgot-pass">Forgot Password ?</p>
+
+                </div>
+
+                <div class="sub-cont">
+                    <div class="img">
+                        <div class="img-text m-up">
+                            <h2>New here?</h2>
+                            <p>Sign up and discover great amount of new opportunities!</p>
+                        </div>
+                        <div class="img-text m-in">
+                            <h2>One of us?</h2>
+                            <p>If you already has an account, just sign in. We've missed you!</p>
+                        </div>
+                        <div class="img-btn">
+                            <span class="m-up">Sign Up</span>
+                            <span class="m-in">Sign In</span>
+                        </div>
+                    </div>
+                    <div class="form sign-up">
+                        <div class="sign">Sign Up</div>
+                        <label>
+                          <span>Name</span>
+                          <input id="registerName" type="text">
+                        </label>
+                        <label>
+                          <span>Email</span>
+                          <input id="registerEmail"type="email">
+                        </label>
+                        <label>
+                          <span>Password</span>
+                          <input id="registerPassword" type="password">
+                        </label>
+                        <label>
+                          <span>Confirm Password</span>
+                          <input id="registerPassword2" type="password">
+                        </label>
+                        <button id="registerSumit" type="button" class="submit">Sign Up Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Header section -->
+    <header class="header-section fixed-top">
+        <div class="container">
+            <!-- logo -->
+            <a class="site-logo" href="/index">
+                <img src="img/logo.png" alt="">
+            </a>
+            <div class="user-panel">
+                <a id="loginHav" href="javascript:void(0)" data-toggle="modal" data-target="#signupPage">Login</a> / <a id="registerHav" href="javascript:void(0)" data-toggle="modal" data-taget="#signupPage">Register</a>
+            </div>
+            <!-- responsive -->
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+            <!-- site menu -->
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/review">Games</a></li>
+                    <li><a id="goMyProfile" href="javascript:void(0)" data-toggle="modal" data-target="#signupPage">MyProfile</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <!-- Header section end -->
+
+
+
+
+
+
+
+    <!-- Page info section -->
+    <section class="page-info-section set-bg" data-setbg="img/page-top-bg/3.jpg">
+        <div class="pi-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-6 text-white">
+                        <h2>Game reviews</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page info section -->
+
+    <!-- Latest news section -->
+    <div class="latest-news-section">
+        <div class="ln-title">Latest News</div>
+        <div class="news-ticker">
+            <div class="news-ticker-contant">
+                <div class="nt-item"><span class="new">news</span>PlayStation 5release date is coming in late 2020. </div>
+                <div class="nt-item"><span class="strategy">game</span>The Last of Us Part II </div>
+                <div class="nt-item"><span class="racing">recommend</span> FINAL FANTASY VII REMAKE </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest news section end -->
+
+    <!-- Page section -->
+    <section id="boxs" class="page-section review-page spad">
+        <div class="container">
+            <div id="main" class="row">
+                <!-- <div class="col-md-6 box">
+                    <div class="game-card">
+
+                        <div class="game-card-img" style="background-image: url('https://media.rawg.io/media/crop/600/400/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg');"></div>
+
+                        <div class="game-card-video">
+                            <video class="video-mp4" loop="true" muted="true" src="https://media.rawg.io/media/stories-640/f78/f789c8011d52e0ffac76b11a88fabee7.mp4"></video>
+                        </div>
+
+
+
+                        <div class="game-card-text">
+                            <h2>GTA</h2>
+                            <p>this is GTA</p>
+                        </div>
+
+                        <a href="javascript:void(0)" class="btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span> INSERT
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 box">
+                    <div class="game-card">
+                        <div class="game-card-img" style="background-image: url('https://media.rawg.io/media/crop/600/400/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg');"></div>
+                        <div class="game-card-text">
+                            <h2>GTA</h2>
+                            <p>this is GTA</p>
+                        </div>
+                        <div class="game-card-stats">
+                            <div class="stat">
+                                <div class="value">4344</div>
+                                <div class="type">Like</div>
+                            </div>
+                            <div class="stat">
+                                <div class="value">9999v</div>
+                                <div class="type">Views</div>
+                            </div>
+                            <div class="stat">
+                                <div class="value">9/2/1998</div>
+                                <div class="type">data</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>   -->
+            </div>
+        </div>
+        <div class="text-center pt-4">
+            <button id="loadMore" class="site-btn btn-sm">Load More</button>
+        </div>
+
+    </section>
+    <!-- Page section end -->
+
+
+    <!-- Review section -->
+    <section class="review-section review-dark spad set-bg" data-setbg="img/review-bg-2.jpg">
+        <div class="container">
+            <div class="section-title text-white">
+                <div class="cata new">new</div>
+                <h2>Recent Reviews</h2>
+            </div>
+            <div class="row text-white">
+                <div class="col-lg-3 col-md-6">
+                    <div class="review-item">
+                        <div class="review-cover set-bg" data-setbg="img/review/1.jpg">
+                            <div class="score yellow">9.3</div>
+                        </div>
+                        <div class="review-text">
+                            <h5>Assasin’’s Creed</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="review-item">
+                        <div class="review-cover set-bg" data-setbg="img/review/2.jpg">
+                            <div class="score purple">9.5</div>
+                        </div>
+                        <div class="review-text">
+                            <h5>Doom</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="review-item">
+                        <div class="review-cover set-bg" data-setbg="img/review/3.jpg">
+                            <div class="score green">9.1</div>
+                        </div>
+                        <div class="review-text">
+                            <h5>Overwatch</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="review-item">
+                        <div class="review-cover set-bg" data-setbg="img/review/4.jpg">
+                            <div class="score pink">9.7</div>
+                        </div>
+                        <div class="review-text">
+                            <h5>GTA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Review section end -->
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+        <div class="container">
+            <ul class="footer-menu">
+
+            </ul>
+            <p class="copyright">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+
+    <!--====== Javascripts & Jquery ======-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        var gameNameArray = [];
+        var gameImageArray = [];
+        var gameVideoArray = [];
+
+        var gameGenresArray = [];
+        //var gameGenreNameArray = [];
+        var gamePlatformsArray = [];
+
+
+        //"https://api.rawg.io/api/games?dates=2019-10-10,2020-10-10&ordering=-added&page_size=30"
+        $(document).ready(function() {
+            $.ajax({
+                type: "GET",
+                url: "https://api.rawg.io/api/games?dates=2019-10-10,2020-10-10&ordering=-added&page_size=30",
+                dataType: "json",
+                success: function(result, status, xhr) {
+
+                    dataResult = result.results;
+
+                    //alert(JSON.stringify(result));
+
+                    //var o=JSON.parse(result);
+                    // alert(result.results[0].name);
+                    console.log(result);
+
+                    for (var i = 0; i < result.results.length; i++) {
+                        gameNameArray[i] = result.results[i].name;
+                        gameImageArray[i] = result.results[i].background_image;　
+
+                        if (result.results[i].clip == null) {
+                            continue;
+                        } else {
+                            gameVideoArray[i] = result.results[i].clip.clip;
+                        }
+                        var divBox = document.createElement("div");
+                        var divGameCard = document.createElement("div");
+                        var divGameImg = document.createElement("div");
+                        var divGameVideo = document.createElement("div");
+                        var divGameText = document.createElement("div");
+                        var insertA = document.createElement("a");
+                        var genresP = document.createElement("p");
+                        var hiddenGenresP = document.createElement("p");
+                        var platformsP = document.createElement("p");
+                        var hiddenPlatformsP = document.createElement("p");
+                        var gameH2 = document.createElement("h2");
+                        var gameVideo = document.createElement("video");
+
+
+
+
+                        divBox.setAttribute("class", "col-md-6 box");
+                        divGameCard.setAttribute("class", "game-card");
+                        divGameImg.setAttribute("class", "game-card-img");
+                        divGameVideo.setAttribute("class", "game-card-video");
+                        divGameText.setAttribute("class", "game-card-text");
+                        divGameCard.setAttribute("id", "game-card-" + i);
+                        insertA.setAttribute("id", "game-btn-" + i);
+                        insertA.setAttribute("class", "btn");
+                        insertA.setAttribute("herf", "javascript:void(0)");
+                        gameVideo.setAttribute("class", "video-mp4");
+                        gameVideo.setAttribute("loop", "true");
+                        genresP.setAttribute("class", "genresText");
+                        hiddenGenresP.setAttribute("class", "hiddengenresText");
+                        hiddenGenresP.setAttribute("hidden", "true");
+                        hiddenPlatformsP.setAttribute("class", "hiddenplatformsText");
+                        hiddenPlatformsP.setAttribute("hidden", "true");
+                        gameVideo.src = gameVideoArray[i];
+
+
+
+
+
+                        //api data
+                        gameH2.innerHTML = gameNameArray[i];
+
+                        insertA.innerHTML = "<span></span><span></span><span></span><span></span>INSERT";
+
+                        divGameImg.style.backgroundImage = "url(" + gameImageArray[i] + ")";
+
+
+                        genresP.innerHTML = "GENRES:&nbsp;&nbsp;&nbsp;";
+
+                        for (var a = 0; a < result.results[i].genres.length; a++) {
+                            gameGenresArray[i] = result.results[i].genres[a].name;
+                            genresP.innerHTML += gameGenresArray[i] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                            hiddenGenresP.innerHTML += gameGenresArray[i];
+                            if (a < result.results[i].genres.length - 1) {
+                                hiddenGenresP.innerHTML += "-";
+                            }
+                        }
+
+                        platformsP.innerHTML = "PLATFORMS:&nbsp;&nbsp;&nbsp;";
+
+                        for (var a = 0; a < result.results[i].parent_platforms.length; a++) {
+                            gamePlatformsArray[a] = result.results[i].parent_platforms[a].platform.name;
+                            platformsP.innerHTML += gamePlatformsArray[a] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                            hiddenPlatformsP.innerHTML += gamePlatformsArray[a];
+                            if (a < result.results[i].parent_platforms.length - 1) {
+                                hiddenPlatformsP.innerHTML += "-";
+                            }
+                        }
+
+                        divBox.appendChild(divGameCard);
+                        divGameCard.appendChild(divGameImg);
+                        divGameCard.appendChild(divGameVideo);
+                        divGameCard.appendChild(divGameText);
+                        divGameCard.appendChild(insertA);
+                        divGameText.appendChild(gameH2);
+                        divGameText.appendChild(genresP);
+                        divGameText.appendChild(hiddenGenresP);
+                        divGameText.appendChild(platformsP);
+                        divGameText.appendChild(hiddenPlatformsP);
+                        divGameVideo.appendChild(gameVideo);
+
+
+                        document.getElementById("main").appendChild(divBox);
+                    }
+
+
+                    //document.getElementById("myImg").src = gameImageArray[0];
+
+
+                },
+                error: function(xhr, status, error) {
+                    alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+                }
+            });
+
+        });
+        //insert
+
+        $(document).on("click", ".btn", function() {
+            var gameBtnId = $(this).attr('id');
+            var gameBtnNum = gameBtnId.split("-");
+            var gameCardId = "game-card-" + gameBtnNum[2];
+            var genres = $("#" + gameCardId).find('.hiddengenresText').text();
+            var platforms = $("#" + gameCardId).find('.hiddenplatformsText').text();
+
+            var mydata = "&gameName=" + gameNameArray[gameBtnNum[2]] +
+                "&image=" + gameImageArray[gameBtnNum[2]] + "&video=" + gameVideoArray[gameBtnNum[2]] + "&genres=" + genres + "&platforms=" + platforms;
+
+            // alert(mydata);
+            // alert(gameCardId);
+
+            $.ajax({
+                url: "http://127.0.0.1:9999/addfavourlist",
+                type: 'POST',
+                data: mydata,
+                success: function(result) {
+
+                    if (result == "noLogin") {
+                        alert("Please login first!");
+                    } else if (result == "inserted") {
+                        alert("This game card has been inserted");
+                    } else if (result == "success") {
+                        alert("The" + gameNameArray[gameBtnNum[2]] + " is inserted");
+                    }
+                    // window.location.href = "http://127.0.0.1:9999/review";
+
+                },
+                error: function(xhr, textStatus, errorThrown) {
+
+                    console.log(textStatus);
+                }
+            });
+
+
+        });
+    </script>
+    <script>
+        $("#loadMore").click(function() {
+            $("#boxs .box:hidden").slice(0, 2).slideDown();
+            if ($("#boxs .box:hidden").length == 0) {
+                $("#loadMore").fadeOut("slow");
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $("#registerSumit").click(function() {
+                alert("Loading now, please wait.");
+                var tempName, temEmail, tempPassword, temPassword2;
+
+                //tempEmail = document.forms["signin"]["Email"].value;
+                //	tempName = document.forms["signin"]["Name"].value;
+                //tempPassword = document.forms["signin"]["Password"].value;
+
+
+                tempName = $("#registerName").val();
+                temEmail = $("#registerEmail").val();
+                tempPassword = $("#registerPassword").val();
+                tempPassword2 = $("#registerPassword2").val();
+
+                $Emailchecking = IsEmail(temEmail);
+
+                if (tempName == "" || tempPassword == "" || temEmail == "" || tempPassword2 == "") {
+                    alert("Please fill in all the blanks.");
+
+                } else if (tempPassword != tempPassword2) {
+                    alert("Please make sure your password is same.");
+                } else if ($Emailchecking == false) {
+                    alert("Please enter a correct email type");
+                } else {
+
+                    var mydata = "&name=" + tempName + "&password=" + tempPassword;
+
+                    $.ajax({
+
+                        url: "http://127.0.0.1:9999/Register",
+                        type: 'POST',
+                        data: mydata,
+                        success: function(result) {
+
+
+
+                            if (result == "fail") {
+                                alert("Registration failed, please try again with other username");
+                            } else if (result == "success") {
+                                alert("Registration success");
+                                alert("Thanks for creating an account, your username is: " + tempName + "and password is: " + tempPassword + ". Enjoy!");
+                                localStorage.setItem("name", tempName);
+                                window.location.href = "http://127.0.0.1:9999/review";
+                            }
+
+
+
+                            //	window.location.href = "http://ABC-nekokitsune4242917356.codeanyapp.com:4242/Register";
+                        },
+                        error: function(xhr, textStatus, errorThrown) {
+
+                            console.log(textStatus);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        var isLogin;
+        $(document).ready(function() {
+
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:9999/logincheck",
+                dataType: "text",
+
+                success: function(result) {
+                    if (result == "fail") {
+                        isLogin = false;
+
+                        localStorage.clear();
+                    } else if (result == "success") {
+                        isLogin = true;
+
+                        document.getElementById("loginHav").innerHTML = localStorage.getItem("name");
+                        document.getElementById("loginHav").removeAttribute("data-toggle");
+
+                        document.getElementById("registerHav").innerHTML = "Logout";
+                        document.getElementById("registerHav").removeAttribute("data-toggle");
+
+                        document.getElementById("goMyProfile").removeAttribute("data-toggle");
+
+
+
+                    }
+
+
+
+
+                    $("#registerHav").click(function() {
+                        if (isLogin) {
+                            window.location.href = "http://127.0.0.1:9999/reviewlogout";
+
+                        }
+                    });
+
+
+                    $("#goMyProfile").click(function() {
+                        if (isLogin) {
+                            window.location.href = "http://127.0.0.1:9999/myProfile";
+                        } else {
+                            alert("Please Login First!");
+                        }
+                    });
+
+
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    alert("Login failed, please check your username and password");
+                    console.log(textStatus);
+                }
+            });
+
+
+        });
+    </script>
+    <script>
+        $(document).on('mouseover', 'div .game-card-img', function() {
+            $(this).css("opacity", 0);
+
+        });
+        $(document).on('mouseout', 'div .game-card-img', function() {
+            $(this).css("opacity", 1);
+
+        });
+        $(document).on('mouseover', 'div .game-card-video', function() {
+
+            $(this).css("opacity", 1);
+            $(this).find('video').get(0).muted = true;
+            $(this).find('video').get(0).currentTime = 0;
+            $(this).find('video').get(0).play();
+
+        });
+        $(document).on('mouseout', 'div .game-card-video', function() {
+            $(this).css("opacity", 0);
+            $(this).find('video').get(0).muted = true;
+            $(this).find('video').get(0).play();
+
+        });
+    </script>
+    <!--login%resgister-->
+    <script>
+        $("#loginSumit").click(function() {
+            alert("Loading now, please wait.");
+            var tempName, tempPassword;
+
+            tempName = $("#loginName").val();
+            tempPassword = $("#loginPassword").val();
+
+            var mydata = "&name=" + tempName + "&password=" + tempPassword;
+
+            if (tempName == "" || tempPassword == "") {
+                alert("Please fill in all the blanks.");
+            } else {
+                $.ajax({
+                    url: "http://127.0.0.1:9999/login",
+                    type: 'POST',
+                    data: mydata,
+                    success: function(result) {
+                        if (result == "fail") {
+                            alert("Not have this user, please check your username");
+                        } else if (result == "wrongpassword") {
+                            alert("incorrect password");
+                        } else if (result == "success") {
+                            alert("Login success");
+                            alert("Thank you for using our service. Enjoy!");
+                            localStorage.setItem("name", tempName);
+                            window.location.href = "http://127.0.0.1:9999/review";
+                        }
+                    },
+                    error: function(xhr, textStatus, errorThrown) {
+
+                        console.log(textStatus);
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        document.querySelector('.img-btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s-signup')
+        });
+    </script>
+    <script>
+        function IsEmail(email) {
+
+            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (!regex.test(email)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

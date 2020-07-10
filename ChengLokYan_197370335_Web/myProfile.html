@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Game Warrior Template</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game Warrior Template">
+    <meta name="keywords" content="warrior, game, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+
+
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header section -->
+    <header class="header-section fixed-top">
+        <div class="container">
+            <!-- logo -->
+            <a class="site-logo" href="/index">
+                <img src="img/logo.png" alt="">
+            </a>
+            <div class="user-panel">
+                <a id="loginHav" href="javascript:void(0)" data-toggle="modal" data-target="#signupPage">Login</a> / <a id="registerHav" href="javascript:void(0)" data-toggle="modal" data-taget="#signupPage">Register</a>
+            </div>
+            <!-- responsive -->
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+            <!-- site menu -->
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/review">Games</a></li>
+                    <li><a href="/myProfile">MyPorfile</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header section end -->
+
+
+
+
+
+    <!-- Page section -->
+    <section id="boxs" class="page-section review-page spad">
+        <div class="container">
+            <div id="main" class="row"> </div>
+        </div>
+        <div class="text-center pt-4">
+            <button id="loadMore" class="site-btn btn-sm">Load More</button>
+        </div>
+
+    </section>
+    <!-- Page section end -->
+
+
+
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+        <div class="container">
+            <ul class="footer-menu">
+
+            </ul>
+            <p class="copyright">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+
+    <!--====== Javascripts & Jquery ======-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script>
+        var gameNameArray = [];
+        var gameImageArray = [];
+        var gameVideoArray = [];
+        var gameGenresArray = [];
+        var gamePlatformsArray = [];
+        $(document).ready(function() {
+
+
+            document.documentElement.style.setProperty('--primary-color', '#f32821');
+            document.documentElement.style.setProperty('--secondary-color', '#880a0a');
+            var tempName;
+            tempName = localStorage.getItem("name");
+            var name = "&name=" + tempName;
+
+            tempName = localStorage.getItem("name");
+            $.ajax({
+                url: "http://127.0.0.1:9999/readfavourlist",
+                type: 'POST',
+                dataType: 'json',
+                data: name,
+                success: function(result) {
+
+
+
+
+                    for (i = 0; i < result.length; i++) {
+                        gameNameArray[i] = result[i].gameName;
+                        gameImageArray[i] = result[i].gameImg;
+                        gameVideoArray[i] = result[i].gameVideo;
+
+                        var divBox = document.createElement("div");
+                        var divGameCard = document.createElement("div");
+                        var divGameImg = document.createElement("div");
+                        var divGameVideo = document.createElement("div");
+                        var divGameText = document.createElement("div");
+                        var insertA = document.createElement("a");
+                        var genresP = document.createElement("p");
+                        var hiddenGenresP = document.createElement("p");
+                        var platformsP = document.createElement("p");
+                        var hiddenPlatformsP = document.createElement("p");
+                        var gameH2 = document.createElement("h2");
+                        var gameVideo = document.createElement("video");
+
+
+
+
+                        divBox.setAttribute("class", "col-md-6 box");
+                        divGameCard.setAttribute("class", "game-card");
+                        divGameImg.setAttribute("class", "game-card-img");
+                        divGameVideo.setAttribute("class", "game-card-video");
+                        divGameText.setAttribute("class", "game-card-text");
+                        divGameCard.setAttribute("id", "game-card-" + i);
+                        insertA.setAttribute("id", "game-btn-" + i);
+                        insertA.setAttribute("class", "btn");
+                        insertA.setAttribute("herf", "javascript:void(0)");
+                        gameVideo.setAttribute("class", "video-mp4");
+                        gameVideo.setAttribute("loop", "true");
+                        genresP.setAttribute("class", "genresText");
+                        hiddenGenresP.setAttribute("class", "hiddengenresText");
+                        hiddenGenresP.setAttribute("hidden", "true");
+                        hiddenPlatformsP.setAttribute("class", "hiddenplatformsText");
+                        hiddenPlatformsP.setAttribute("hidden", "true");
+                        gameVideo.src = gameVideoArray[i];
+
+                        //user game  data
+                        gameH2.innerHTML = gameNameArray[i];
+
+                        insertA.innerHTML = "<span></span><span></span><span></span><span></span>DELETE";
+
+                        divGameImg.style.backgroundImage = "url(" + gameImageArray[i] + ")";
+
+
+                        genresP.innerHTML = "GENRES:&nbsp;&nbsp;&nbsp;";
+
+                        for (var a = 0; a < result[i].gameGenres.length; a++) {
+                            gameGenresArray[i] = result[i].gameGenres[a];
+                            genresP.innerHTML += gameGenresArray[i] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                        }
+
+                        platformsP.innerHTML = "PLATFORMS:&nbsp;&nbsp;&nbsp;";
+
+                        for (var a = 0; a < result[i].gamePlatforms.length; a++) {
+                            gamePlatformsArray[a] = result[i].gamePlatforms[a];
+                            platformsP.innerHTML += gamePlatformsArray[a] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                        }
+
+                        divBox.appendChild(divGameCard);
+                        divGameCard.appendChild(divGameImg);
+                        divGameCard.appendChild(divGameVideo);
+                        divGameCard.appendChild(divGameText);
+                        divGameCard.appendChild(insertA);
+                        divGameText.appendChild(gameH2);
+                        divGameText.appendChild(genresP);
+                        divGameText.appendChild(hiddenGenresP);
+                        divGameText.appendChild(platformsP);
+                        divGameText.appendChild(hiddenPlatformsP);
+                        divGameVideo.appendChild(gameVideo);
+
+
+                        document.getElementById("main").appendChild(divBox);
+                    }
+                    //alert(gameImageArray);
+
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    alert("Login failed, please check your username and password");
+                    console.log(textStatus);
+                }
+            });
+        });
+
+        //remove
+        $(document).on("click", ".btn", function() {
+            var gameBtnId = $(this).attr('id');
+            var gameBtnNum = gameBtnId.split("-");
+            var gameCardId = "game-card-" + gameBtnNum[2];
+            var genres = $("#" + gameCardId).find('.hiddengenresText').text();
+            var platforms = $("#" + gameCardId).find('.hiddenplatformsText').text();
+
+            var mydata = "&gameName=" + gameNameArray[gameBtnNum[2]];
+
+
+            // alert(mydata);
+            // alert(gameCardId);
+
+            $.ajax({
+                url: "http://127.0.0.1:9999/removefavourlist",
+                type: 'POST',
+                data: mydata,
+                success: function(result) {
+
+                    if (result == "success") {
+                        alert("The" + gameNameArray[gameBtnNum[2]] + " is deleted");
+                        window.location.href = "http://127.0.0.1:9999/myProfile";
+                    }
+
+
+                },
+                error: function(xhr, textStatus, errorThrown) {
+
+                    console.log(textStatus);
+                }
+            });
+
+
+        });
+    </script>
+
+
+    <script>
+        var isLogin;
+        $(document).ready(function() {
+
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:9999/logincheck",
+                dataType: "text",
+
+                success: function(result) {
+                    if (result == "fail") {
+                        isLogin = false;
+
+                        localStorage.clear();
+                    } else if (result == "success") {
+                        isLogin = true;
+
+                        document.getElementById("loginHav").innerHTML = localStorage.getItem("name");
+                        document.getElementById("loginHav").removeAttribute("data-toggle");
+
+                        document.getElementById("registerHav").innerHTML = "Logout";
+                        document.getElementById("registerHav").removeAttribute("data-toggle");
+
+                        // document.getElementById("goMyProfile").removeAttribute("data-toggle");
+
+
+
+                    }
+
+                    $("#registerHav").click(function() {
+                        if (isLogin) {
+                            window.location.href = "http://127.0.0.1:9999/logout";
+
+                        }
+                    });
+
+
+                    $("#goMyProfile").click(function() {
+                        if (isLogin) {
+                            window.location.href = "http://127.0.0.1:9999/myProfile";
+                        } else {
+                            alert("Please Login First!");
+                        }
+                    });
+
+
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    alert("Login failed, please check your username and password");
+                    console.log(textStatus);
+                }
+            });
+
+
+        });
+    </script>
+    <script>
+        $("#loadMore").click(function() {
+            $("#boxs .box:hidden").slice(0, 2).slideDown();
+            if ($("#boxs .box:hidden").length == 0) {
+                $("#loadMore").fadeOut("slow");
+            }
+        });
+    </script>
+    <script>
+        $(document).on('mouseover', 'div .game-card-img', function() {
+            $(this).css("opacity", 0);
+
+        });
+        $(document).on('mouseout', 'div .game-card-img', function() {
+            $(this).css("opacity", 1);
+
+        });
+        $(document).on('mouseover', 'div .game-card-video', function() {
+
+            $(this).css("opacity", 1);
+            $(this).find('video').get(0).muted = true;
+            $(this).find('video').get(0).currentTime = 0;
+            $(this).find('video').get(0).play();
+
+        });
+        $(document).on('mouseout', 'div .game-card-video', function() {
+            $(this).css("opacity", 0);
+            $(this).find('video').get(0).muted = true;
+            $(this).find('video').get(0).play();
+
+        });
+    </script>
+
+</body>
+
+</html>
